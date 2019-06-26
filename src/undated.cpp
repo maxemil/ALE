@@ -1051,7 +1051,7 @@ string exODT_model::counts_string_undated(scalar_type samples)
     << branch_counts["Ls"][e]/samples << "\t"
     << branch_counts["Os"][e]/samples << "\t"
     //<< branch_counts["singleton"][e]/samples << "\t"
-    << branch_counts["copies"][e]/samples << "\n";
+    << branch_counts["copies"][e]/samples/(1-uE[e]) << "\n";
     else
     out<< "S_terminal_branch\t"<< named_branch.str() << "\t"
     << branch_counts["Ds"][e]/samples << "\t"
